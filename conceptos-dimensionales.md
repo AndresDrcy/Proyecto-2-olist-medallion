@@ -60,7 +60,7 @@ Lo único exclusivo del nivel "orden" es el `order_id` mismo, así que se queda 
 
 ---
 
-## 3. Junk Dimension (Dimensión chatarra) 🎯
+## 3. Junk Dimension (Dimensión chatarra)
 
 > Esta sección está **expandida** porque el concepto resultó el más confuso durante la construcción. Si vienes de SQL tradicional o de modelos en estrella simples, esta dimensión rompe varios moldes.
 
@@ -92,7 +92,7 @@ La palabra "junk" (basura) es **deliberadamente despectiva**. Viene de Kimball y
 Es fácil confundirse y pensar que una junk dimension es esto:
 
 ```
-❌ INTERPRETACIÓN INCORRECTA: tres mini-dimensiones separadas
+INTERPRETACIÓN INCORRECTA: tres mini-dimensiones separadas
 
 dim_payment_type     dim_installments_bucket    dim_review_flag
 ┌────────────┐       ┌──────────────────┐       ┌────────────┐
@@ -108,7 +108,7 @@ dim_payment_type     dim_installments_bucket    dim_review_flag
 ### Lo que ES una junk dimension
 
 ```
-✅ UNA SOLA tabla que enumera COMBINACIONES reales
+UNA SOLA tabla que enumera COMBINACIONES reales
 
 dim_order_junk
 ┌─────────┬──────────────┬──────────────────┬──────────────┬────────────────┬───────────┐
@@ -218,11 +218,11 @@ La junk dimension tiene críticos legítimos:
 ### Aplicabilidad en este proyecto
 
 Cumplimos los criterios para junk:
-- ✅ 5 atributos (cumple el "3+" recomendado)
-- ✅ Cada atributo tiene cardinalidad pequeña (2-8 valores)
-- ✅ Ninguno tiene jerarquía propia
-- ✅ Son verdaderamente "garbage": flags y buckets operativos sin riqueza descriptiva
-- ✅ Es defendible en entrevista como decisión consciente
+- 5 atributos (cumple el "3+" recomendado)
+- Cada atributo tiene cardinalidad pequeña (2-8 valores)
+- Ninguno tiene jerarquía propia
+- Son verdaderamente "garbage": flags y buckets operativos sin riqueza descriptiva
+- Es defendible en entrevista como decisión consciente
 
 ### Regla mental
 
