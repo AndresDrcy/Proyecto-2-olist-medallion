@@ -62,7 +62,7 @@ Lo único exclusivo del nivel "orden" es el `order_id` mismo, así que se queda 
 
 ## 3. Junk Dimension (Dimensión chatarra)
 
-> Esta sección está **expandida** porque el concepto resultó el más confuso durante la construcción. Si vienes de SQL tradicional o de modelos en estrella simples, esta dimensión rompe varios moldes.
+> Esta sección está **expandida** porque el concepto resultó el más confuso durante la construcción. Si viene de SQL tradicional o de modelos en estrella simples, esta dimensión rompe varios moldes.
 
 ### Definición formal (Kimball)
 
