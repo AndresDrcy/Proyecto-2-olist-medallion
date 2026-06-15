@@ -224,7 +224,7 @@ Cumplimos los criterios para junk:
 - Son verdaderamente "garbage": flags y buckets operativos sin riqueza descriptiva
 - Es defendible en entrevista como decisión consciente
 
-### Regla mental
+### Tener en cuenta esta regla
 
 > Si un atributo es **pequeño, descriptivo, sin jerarquía propia, y no merece una dimensión solo** — va a la junk.
 
