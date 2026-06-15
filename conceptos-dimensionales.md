@@ -203,7 +203,7 @@ Pero en la práctica solo **107 combinaciones reales** aparecen en los datos. La
 - Las queries sobre la dim incluirían combinaciones imposibles → potencial confusión.
 - La tabla pesaría 10x más sin aportar información.
 
-### Cuándo NO usar junk dimension (counterargument honesto)
+### Cuándo NO usar junk dimension
 
 La junk dimension tiene críticos legítimos:
 
