@@ -284,7 +284,7 @@ Cuatro páginas que explotan cada concepto dimensional implementado.
 
 **Decisión:** `CREATE VIEW v_dim_customer_current AS SELECT * FROM dim_customer WHERE is_current = True;`
 
-**Rationale:** tablas calculadas en DAX rompen Direct Lake y fuerzan fallback a DirectQuery globalmente. Una vista SQL mantiene Direct Lake operativo para el resto del modelo y solo la vista cae en DirectQuery localmente.
+**Rationale:** Las tablas calculadas en DAX pueden provocar fallback a DirectQuery en consultas de modelos Direct Lake. Al mover esa lógica a una vista SQL, se mantiene el rendimiento de Direct Lake para el resto del modelo y el impacto de DirectQuery queda limitado a las consultas que utilizan la vista.
 
 ### 7. Junk dimension con combinaciones reales (no producto cartesiano)
 
