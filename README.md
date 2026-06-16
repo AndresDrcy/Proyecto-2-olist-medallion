@@ -333,7 +333,7 @@ Este patrón de "umbrales tolerables" es estándar en producción real — la pe
 - **Sin tests unitarios formales:** las validaciones son asserts simples al final de cada notebook. Mejorable con `chispa`, `pydeequ` o Great Expectations.
 - **Sin carga incremental real:** todos los notebooks usan `mode("overwrite")`. La promoción a `append` o `MERGE` requiere agregar lógica de detección de cambios.
 - **`geolocation` excluido:** decisión de scope. Limita análisis geográfico fino más allá de city/state.
-- **Sin particionado de fact_order_items:** ~112K filas no lo justifican, pero a escala productiva se particionaría por `anio_mes` o `date_sk_purchase`.
+- **Sin particionado de fact_order_items:** 112K filas no lo justifican, pero a escala productiva se particionaría por `anio_mes` o `date_sk_purchase`.
 
 ---
 
