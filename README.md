@@ -263,7 +263,7 @@ Cuatro páginas que explotan cada concepto dimensional implementado.
 
 **Rationale:**
 - **Madurez:** Direct Lake on SQL está GA (Disponibilidad General). Direct Lake on OneLake sigue en public preview.
-- **Soporte de SQL views:** el diseño requiere la vista `v_dim_customer_current` para filtrar la versión vigente del SCD2 sin caer en tablas calculadas DAX (que romperían Direct Lake completo). Direct Lake on OneLake no soporta SQL views.
+- **Soporte de SQL views:** el diseño requiere la vista `v_dim_customer_current` para filtrar la versión vigente del SCD2 sin caer en tablas calculadas DAX (que romperían Direct Lake completo). Direct Lake on OneLake no soporta SQL views, no es que Direct Lake on OneLake no soporte SQL views en general, lo que no soporta es que una tabla del modelo semántico esté basada en una vista SQL no materializada. Direct Lake on OneLake requiere tablas Delta físicas.
 - **Multi-source no aplica:** la ventaja diferencial de OneLake (consumir tablas de múltiples Fabric items) no se aprovecha — el modelo consume exclusivamente `lh_olist_gold`.
 
 **Trade-off aceptado:** queries sobre `v_dim_customer_current` ejecutan en DirectQuery, con costo de latencia mayor. Aceptable para el volumen del proyecto y se limita a slicers, no a medidas masivas.
