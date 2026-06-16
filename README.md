@@ -345,7 +345,7 @@ Documentados en orden de "lo que más me costó":
 
 2. **Diferencia entre `customer_id` (uno por orden) y `customer_unique_id` (uno por persona)** en Olist. Esta separación que parece rara al inicio es exactamente el alimento de SCD2: cada `customer_id` lleva la "instantánea" del cliente en el momento de su orden.
 
-3. **Direct Lake puede caer silenciosamente a DirectQuery** cuando se usan SQL views, tablas calculadas DAX, o ciertas funciones. La herramienta de diagnóstico del modelo lo identifica.
+3. **Direct Lake puede caer en DirectQuery** cuando se usan SQL views, tablas calculadas DAX, o ciertas funciones. La herramienta de diagnóstico del modelo lo identifica.
 
 4. **Relaciones inactivas + `USERELATIONSHIP()`** para role-playing dimensions sin duplicar `dim_date`.
 
