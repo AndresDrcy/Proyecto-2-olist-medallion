@@ -247,7 +247,6 @@ Cuatro páginas que explotan cada concepto dimensional implementado.
 
 **Rationale:**
 - Cada capa tiene su propio SQL Endpoint y permisos potenciales (un analista podría tener acceso solo a Gold).
-- No depende de features en preview: Lakehouse Schemas siguen en Public Preview en Fabric a la fecha del proyecto.
 - Patrón común en deployments productivos de Fabric.
 
 **Trade-off aceptado:** los notebooks deben adjuntar múltiples Lakehouses y usar nombres calificados (`spark.read.table(f"{LAKEHOUSE}.tabla")`). Más verboso pero más explícito.
