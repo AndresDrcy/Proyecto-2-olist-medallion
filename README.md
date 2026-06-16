@@ -17,7 +17,7 @@ Proyecto construido como pieza central de portfolio para la transición Data Ana
 | Concepto | Dónde se aplica |
 |---|---|
 | **SCD Tipo 2** | `dim_customer` con `valid_from`, `valid_to`, `is_current` y `attribute_hash` |
-| **Junk Dimension** | `dim_order_junk` agrupa 5 atributos categóricos pequeños |
+| **Junk Dimension** | `dim_order_junk` agrupa 5 atributos (categoria) categóricos pequeños |
 | **Degenerate Dimension** | `order_id`, `order_item_id`, `review_id` viven en facts sin tabla propia |
 | **Conformed Dimension** | `dim_customer` y `dim_date` compartidas por `fact_order_items` y `fact_reviews` |
 | **Role-playing Dimension** | `dim_date` referenciada como `date_sk_purchase` (activa) y `date_sk_delivered` (inactiva) |
