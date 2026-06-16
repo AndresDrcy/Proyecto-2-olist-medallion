@@ -262,7 +262,7 @@ Cuatro páginas que explotan cada concepto dimensional implementado.
 **Decisión:** Direct Lake on SQL, con la vista `v_dim_customer_current` agregada como DirectQuery dentro del modelo compuesto.
 
 **Rationale:**
-- **Madurez:** Direct Lake on SQL está GA. Direct Lake on OneLake sigue en public preview.
+- **Madurez:** Direct Lake on SQL está GA (Disponibilidad General). Direct Lake on OneLake sigue en public preview.
 - **Soporte de SQL views:** el diseño requiere la vista `v_dim_customer_current` para filtrar la versión vigente del SCD2 sin caer en tablas calculadas DAX (que romperían Direct Lake completo). Direct Lake on OneLake no soporta SQL views.
 - **Multi-source no aplica:** la ventaja diferencial de OneLake (consumir tablas de múltiples Fabric items) no se aprovecha — el modelo consume exclusivamente `lh_olist_gold`.
 
