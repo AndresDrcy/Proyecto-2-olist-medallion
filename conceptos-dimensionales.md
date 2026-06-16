@@ -197,7 +197,7 @@ Pero en la práctica solo **107 combinaciones reales** aparecen en los datos. La
 - `order_status = "canceled"` + `delivery_status_bucket = "On time"` → imposible (una orden cancelada no se entrega).
 - `order_status = "delivered"` + `payment_type = "voucher"` + `installments_bucket = "13+"` → ningún voucher en Olist se pagó en 13+ cuotas.
 
-**Decisión técnica:** la junk dimension **solo almacena las combinaciones observadas**, no el producto cartesiano completo. Si almacenaras las 1024:
+**Decisión técnica:** la junk dimension **solo almacena las combinaciones observadas**, no el producto cartesiano completo. Si se almacenara las 1024:
 
 - Tendrías 917 filas huérfanas (sin referencia desde el fact) → ruido.
 - Las queries sobre la dim incluirían combinaciones imposibles → potencial confusión.
