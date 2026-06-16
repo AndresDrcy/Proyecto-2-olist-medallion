@@ -351,7 +351,7 @@ Documentados en orden de "lo que más me costó":
 
 5. **Validar contra una PK explícita, no contra `df.columns[0]`.** Joins reorganizan columnas; una validación que asume posición es frágil.
 
-6. **Investigar antes de tirar datos.** Los 30 huérfanos en `fact_reviews` se podían filtrar silenciosamente. El ejercicio de rastreo (eslabón 1 → 2 → 3) reveló que el sistema fuente tiene ruido temporal que merece documentación, no ocultamiento.
+6. **Investigar antes de descartar datos.** Los 30 huérfanos en `fact_reviews` se podían filtrar. El ejercicio de rastreo (eslabón 1 → 2 → 3) reveló que el sistema fuente tiene ruido temporal que merece documentación, no eliminarlos.
 
 ---
 
